@@ -1,0 +1,18 @@
+def BubbleSort(arr):
+    n = len(arr)
+    for i in range(0,n-1):
+        swapped = 0
+        for j in range(0,n-i-1):
+            if(arr[j]>arr[j+1]):
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+                swapped = 1
+        if(swapped==0):
+            break
+
+# Driver code to test above
+arr = [10, 7, 8, 9, 1, 5]
+print("before sorting")
+print(arr)
+print("after sorting")
+BubbleSort(arr)
+print(arr)
