@@ -15,7 +15,7 @@ def max_heapify(arr,n,i):
 
 def build_max_heap(arr):
     n = len(arr)
-    for i in range(n//2-1,0,-1):
+    for i in range(n//2-1,-1,-1):
         max_heapify(arr,n,i)
 
 def heapSort(arr):
