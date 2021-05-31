@@ -1,0 +1,21 @@
+import numpy
+
+def jobSeq(arr):
+    arr.sort(key=lambda x:x[2],reverse=True)
+    totalDays = max(arr)[1] #this give the maximum day
+    jobSequence = [None]*totalDays
+    dateSlot = [False]*totalDays
+    profit = 0
+    for i in range(len(arr)):
+        for j in range(min(totalDays-1,arr[i][1]-1),-1,-1):
+            if dateSlot[j] is False:
+                jobSequence[j] = arr[i][0]
+                profit += arr[i][2]
+                dateSlot[j] = True
+                break
+    print("The jobs will be sequenced in the following pattern: ",jobSequence)
+    print("Total profit will be: ",profit)
+
+#driver code
+arr = [['a',2,100],['b',1,19],['c',2,27],['d',1,25],['e',3,15]]
+jobSeq(arr)
