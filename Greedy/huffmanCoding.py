@@ -38,4 +38,4 @@ while len(nodes)>1:
     nodes.append(newNode)
 
 printing(nodes[0])
-print("Time Complexity: O(n*log n)")
+print("Time Complexity: O(n**2*log n)")
