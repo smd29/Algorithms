@@ -1,5 +1,3 @@
-import numpy
-
 def jobSeq(arr):
     arr.sort(key=lambda x:x[2],reverse=True)
     totalDays = max(arr)[1] #this give the maximum day
