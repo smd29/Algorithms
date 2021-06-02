@@ -1,0 +1,9 @@
+def fibo(n):
+    tab = [0,1]
+    for i in range(2,n+1):
+        tab.append(tab[i-1]+tab[i-2])
+    return tab
+#driver code
+n = 10
+tab = fibo(n)
+print("First ",n,"fibonacci numbers are: ",tab)
