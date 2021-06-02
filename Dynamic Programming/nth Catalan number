@@ -10,5 +10,5 @@ def catalan(n):
     return catNums[n]
 
 #driver code:
-val = catalan(10)
-print("The 10th Catalan Number is: ",val)
+n = 10
+print("The 10th Catalan Number is: ",catalan(n-1))
